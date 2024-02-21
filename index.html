@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Calculator</title>
+    <link
+      href=" https://png2.cleanpng.com/sh/3d0063d4fdbd944ef4ca7ef495f5a7e6/L0KzQoG3UcAzN6Nxh5H9cnHxg8HokvVvfF54fdG2YX7nPcjsgr1qa5DzRdNtbXnxecT7kvF1d6MygdV4bj33icHsTf9nNahqeuVydD24dYHsgcgxPpRmfaJvND67SYi9VcQ3PGI6T6o5MUi7QoOBU8EveJ9s/transparent-seo-and-web-icon-administrator-icon-type-of-websit-5e0ea806cae0f4.897654641578018822831.png"
+      rel="shortcut icon"
+    />
+    <!-- adding the icon to the webpage -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <!-- attaching the cdn file of "Bootstrap" to the webpage -->
+  </head>
+  <body>
+    <!-- adding a container class to add a "container" to the page in order to align the page at the center   -->
+    <div class="container">
+      <!-- adding a row at the top of the container by the help of "row" class -->
+
+      <div class="row">
+        <!-- adding a "col" class and making its width to cover the entire row by using "col-12" and adding a breakpoint of "sm" -->
+        <div class="col-sm-12">
+          <!-- used the "h1" tag to give the heading and added the "text-center" class to align it in the center -->
+          <!-- used the "em" tag to make it italic  -->
+          <h1 class="text-center"><em>Java Script</em> Calculator</h1>
+        </div>
+      </div>
+      <div class="row">
+        <!-- used the "col-lg-4" class to allow it cover 4 grid columns until the viewport is 992px -->
+        <div class="col-lg-4">
+          <!-- used the "input tag; type = number" to allow the user to feed the desired number -->
+          <!-- added the "form-control" class of bootstrap -->
+          <!-- added the attribute "id" too, inorder to access it throught the javascript -->
+          <input type="number" class="form-control" id="entry1" />
+          <!-- used the "class=form-text" in order to make the user know that they have to enter the number here(just for information) -->
+          <div id="xyz" class="form-text">Enter your desired number1</div>
+        </div>
+        <!-- used the class "offset-1" to add space before the button  -->
+        <div class="col-lg-2 offset-1">
+          <!-- creating a dropdown using class "dropdown" -->
+          <div class="dropdown">
+            <!-- used the "button" tag to create the button  and adding outline and light class to it -->
+            <!-- used the class"dropdown-toggle to create the toggle effect -->
+            <!-- used the data attribute to toggle the dropdown -->
+            <button
+              class="btn btn-light btn-outline dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-bs-toggle="dropdown"
+            >
+              Mathematical Operators
+            </button>
+
+            <!-- used the "ul" tag and added the class "dropdown-menu"  -->
+            <ul class="dropdown-menu" id="show">
+              <!-- creating the dropdown items using "li" tag  -->
+              <!-- using the "onclick" event to call the functin "cleardata" whcih will clear the value of the result section  -->
+              <li class="dropdown-item" id="plus" onclick="cleardata()">+</li>
+              <li class="dropdown-item" id="minus" onclick="cleardata()">-</li>
+              <li class="dropdown-item" id="multiply" onclick="cleardata()">
+                x
+              </li>
+
+              <li class="dropdown-item" id="divide" onclick="cleardata()">/</li>
+            </ul>
+          </div>
+          <div class="form-text">select the operator</div>
+        </div>
+        <!-- creating another input tag to take the second value from the user  -->
+        <div class="col-lg-4 offset-lg-1">
+          <input type="number" id="entry2" class="form-control" />
+          <div class="form-text">Enter your desired value 2</div>
+        </div>
+      </div>
+      <!-- creating a button to calculate the value of the operation -->
+      <div class="row my-3">
+        <!-- <div class="col my-3 offset-lg-5"> -->
+        <input
+          type="submit"
+          value="calculate"
+          id="calculate"
+          class="btn btn-success"
+        />
+        <!-- </div> -->
+      </div>
+      <div class="row">
+        <div class="col">
+          <!-- using the "text area " tag to display the result of the operation  -->
+          <!-- making it readonly so that user can't temper its value  -->
+          <div class="row">
+            <div class="col-3 offset-4">
+              <small> <strong>Answer:</strong></small>
+              <input class="form-control" id="output" readonly />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- adding the cdn file of javascript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <!-- attaching my own javascript file   -->
+    <script src="./calculator.js"></script>
+  </body>
+</html>
