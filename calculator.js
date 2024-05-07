@@ -49,8 +49,8 @@ function calfn() {
   }
 }
 // this function will be triggered and will clear the "result" section  as soon as the user changes the values in the "input" section
-input1.addEventListener("keyup", cleardata);
-input2.addEventListener("keyup", cleardata);
+input1.addEventListener("onchange", cleardata);
+input2.addEventListener("onchange", cleardata);
 
 function cleardata() {
   result.value = " ";
